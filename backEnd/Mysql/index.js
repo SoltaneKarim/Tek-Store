@@ -1,12 +1,13 @@
 const mysql = require('mysql2');
-const config = {
+
+const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
     database: 'tekstore'
-  };
+  });
 
-const connection = mysql.createConnection(config)
+
 connection.connect((err)=>{
     if (err) {
         console.log(err)
@@ -17,9 +18,9 @@ connection.connect((err)=>{
 })
 
 const getAllProducts = (callback) => {
-   
+    
 };
 
 
 
-module.exports= { getAllProducts };
+module.exports = connection;
