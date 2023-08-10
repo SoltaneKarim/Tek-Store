@@ -7,7 +7,6 @@ const connection = mysql.createConnection({
     database: 'tekstore'
   });
 
-
 connection.connect((err)=>{
     if (err) {
         console.log(err)
@@ -16,11 +15,5 @@ connection.connect((err)=>{
         console.log("db MYSQL connected")
     }
 })
-
-const getAllProducts = (callback) => {
-    
-};
-
-
 
 module.exports = connection;

@@ -5,8 +5,9 @@ import { useState } from 'react'
 import CartList from './components/CartList';
 
 const App = () => {
-const [menuView, setMenuView] = useState(false);
-const [view,setView] = useState("productList");
+  const [menuView, setMenuView] = useState(false);
+  const [view,setView] = useState("productList");
+  
 const toggleMenu = ()=> {
   setMenuView(!menuView)
 }
